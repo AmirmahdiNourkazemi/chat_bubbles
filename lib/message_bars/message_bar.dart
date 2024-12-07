@@ -145,6 +145,7 @@ class MessageBar extends StatelessWidget {
                         style: textFieldTextStyle,
                         decoration: InputDecoration(
                           hintText: messageBarHintText,
+                          hintTextDirection: TextDirection.rtl,
                           hintMaxLines: 1,
                           contentPadding: const EdgeInsets.symmetric(
                               horizontal: 8.0, vertical: 10),
@@ -152,17 +153,17 @@ class MessageBar extends StatelessWidget {
                           fillColor: Colors.white,
                           filled: true,
                           enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
+                            borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Colors.white,
-                              width: 0.2,
+                              color: Color(0xFF15B8A6),
+                              width: 1,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
+                            borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Colors.black26,
-                              width: 0.2,
+                              color: Color(0xFF15B8A6),
+                              width: 1,
                             ),
                           ),
                         ),
