@@ -44,6 +44,7 @@ class MessageBar extends StatelessWidget {
   final TextStyle messageBarHintStyle;
   final TextStyle textFieldTextStyle;
   final Color sendButtonColor;
+  final Widget sendButtonIcon;
   final void Function(String)? onTextChanged;
   final void Function(String)? onSend;
   final void Function()? onTapCloseReply;
@@ -66,6 +67,11 @@ class MessageBar extends StatelessWidget {
     this.onTextChanged,
     this.onSend,
     this.onTapCloseReply,
+    this.sendButtonIcon = const Icon(
+      Icons.send,
+      color: Colors.white,
+      size: 24,
+    )
   });
 
   /// [MessageBar] builder method
@@ -165,11 +171,7 @@ class MessageBar extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 16),
                     child: InkWell(
-                      child: Icon(
-                        Icons.send,
-                        color: sendButtonColor,
-                        size: 24,
-                      ),
+                      child: sendButtonIcon,
                       onTap: () {
                         if (_textController.text.trim() != '') {
                           if (onSend != null) {
