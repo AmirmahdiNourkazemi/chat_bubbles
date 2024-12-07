@@ -48,7 +48,6 @@ class MessageBar extends StatelessWidget {
   final void Function(String)? onTextChanged;
   final void Function(String)? onSend;
   final void Function()? onTapCloseReply;
-
   /// [MessageBar] constructor
   ///
   ///
@@ -136,10 +135,12 @@ class MessageBar extends StatelessWidget {
                     child: Container(
                       child: TextField(
                         controller: _textController,
+                        textDirection: TextDirection.rtl,
+
                         keyboardType: TextInputType.multiline,
                         textCapitalization: TextCapitalization.sentences,
                         minLines: 1,
-                        maxLines: 3,
+                        maxLines: null,
                         onChanged: onTextChanged,
                         style: textFieldTextStyle,
                         decoration: InputDecoration(
