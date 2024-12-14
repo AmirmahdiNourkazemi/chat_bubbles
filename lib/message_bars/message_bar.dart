@@ -162,7 +162,7 @@ class MessageBar extends StatelessWidget {
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF15B8A6),
+                              color: Color(0xFFE96F79),
                               width: 1,
                             ),
                           ),
