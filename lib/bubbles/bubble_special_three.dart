@@ -95,6 +95,7 @@ class BubbleSpecialThree extends StatelessWidget {
                     text,
                     style: textStyle,
                     textAlign: TextAlign.right,
+                    
                   ),
                 ),
                 stateIcon != null && stateTick
