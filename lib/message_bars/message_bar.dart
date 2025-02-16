@@ -45,6 +45,7 @@ class MessageBar extends StatelessWidget {
   final TextStyle textFieldTextStyle;
   final Color sendButtonColor;
   final Widget sendButtonIcon;
+  final Color? fillColor;
   final void Function(String)? onTextChanged;
   final void Function(String)? onSend;
   final void Function()? onTapCloseReply;
@@ -66,6 +67,7 @@ class MessageBar extends StatelessWidget {
     this.onTextChanged,
     this.onSend,
     this.onTapCloseReply,
+    this.fillColor,
     this.sendButtonIcon = const Icon(
       Icons.send,
       color: Colors.white,
@@ -150,7 +152,7 @@ class MessageBar extends StatelessWidget {
                           contentPadding: const EdgeInsets.symmetric(
                               horizontal: 8.0, vertical: 10),
                           hintStyle: messageBarHintStyle,
-                          fillColor: Colors.white,
+                          fillColor: fillColor,
                           filled: true,
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
