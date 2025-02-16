@@ -150,7 +150,7 @@ class BubbleNormal extends StatelessWidget {
                     child: SelectableText(
                       text,
                       style: textStyle,
-                      textAlign: TextAlign.left,
+                      textAlign: TextAlign.right,
                     ),
                   ),
                   stateIcon != null && stateTick
