@@ -46,6 +46,7 @@ class MessageBar extends StatelessWidget {
   final Color sendButtonColor;
   final Widget sendButtonIcon;
   final Color? fillColor;
+  final Color? borderColor;
   final void Function(String)? onTextChanged;
   final void Function(String)? onSend;
   final void Function()? onTapCloseReply;
@@ -68,6 +69,7 @@ class MessageBar extends StatelessWidget {
     this.onSend,
     this.onTapCloseReply,
     this.fillColor,
+    this.borderColor,
     this.sendButtonIcon = const Icon(
       Icons.send,
       color: Colors.white,
@@ -156,15 +158,15 @@ class MessageBar extends StatelessWidget {
                           filled: true,
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
-                            borderSide: const BorderSide(
-                              color: Color(0xFFE96F79),
+                            borderSide:  BorderSide(
+                              color: borderColor ?? Color(0xFFE96F79),
                               width: 1,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
-                            borderSide: const BorderSide(
-                              color: Color(0xFFE96F79),
+                            borderSide:  BorderSide(
+                              color:borderColor ?? Color(0xFFE96F79),
                               width: 1,
                             ),
                           ),
