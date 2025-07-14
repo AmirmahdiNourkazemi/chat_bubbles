@@ -19,6 +19,7 @@ class BubbleSpecialThree extends StatelessWidget {
   final bool seen;
   final TextStyle textStyle;
   final BoxConstraints? constraints;
+  final bool isRtl;
 
   const BubbleSpecialThree({
     Key? key,
@@ -34,6 +35,7 @@ class BubbleSpecialThree extends StatelessWidget {
       color: Colors.black87,
       fontSize: 16,
     ),
+    this.isRtl = true,
   }) : super(key: key);
 
   ///chat bubble builder method
@@ -94,8 +96,8 @@ class BubbleSpecialThree extends StatelessWidget {
                   child: Text(
                     text,
                     style: textStyle,
-                    textAlign: TextAlign.right,
-                    textDirection: TextDirection.rtl,
+                    textAlign: !isRtl ? TextAlign.left : TextAlign.right,
+                    textDirection: !isRtl ? TextDirection.ltr : TextDirection.rtl,
                     
                   ),
                 ),
